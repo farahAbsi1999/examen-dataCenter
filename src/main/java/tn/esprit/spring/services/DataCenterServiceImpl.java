@@ -29,9 +29,7 @@ public class DataCenterServiceImpl implements IDataCenterService {
 	@Scheduled(cron="*/10 * * * * *")
 	public void getDataCenters(){
 		for(DataCenter dataCenter:listerDataCenter()){
-			log.info("Data Center : "+dataCenter.getRegion());
 			for(VirtualMachine vm:dataCenter.getVms()){
-				log.info("OS : "+vm.getOs());
 			}
 		}
 	}
