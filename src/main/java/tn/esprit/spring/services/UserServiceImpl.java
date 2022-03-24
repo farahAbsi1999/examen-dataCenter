@@ -16,5 +16,11 @@ public class UserServiceImpl implements IUserService {
 	public void ajouterUser(User user) {
 		userRepository.save(user);
 	}
+	
+	@Override
+	public void deleteUser(Integer id) {
+		userRepository.delete(userRepository.findById(id).get());
+		
+	}
 
 }
