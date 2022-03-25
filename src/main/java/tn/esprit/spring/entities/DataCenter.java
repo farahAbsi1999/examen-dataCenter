@@ -6,6 +6,8 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -28,6 +30,8 @@ public class DataCenter implements Serializable {
 	private Date dateFabriquation;
 	private int capaciteDisque;
 	private int espaceLibreDisque;
+	@Enumerated(EnumType.STRING)
+	private Type type ;
 	@JsonIgnore
 	@OneToMany(mappedBy="dataCenter", fetch=FetchType.EAGER, cascade=CascadeType.REMOVE)
 	private List<VirtualMachine> vms;
@@ -70,6 +74,12 @@ public class DataCenter implements Serializable {
 	}
 	public void setVms(List<VirtualMachine> vms) {
 		this.vms = vms;
+	}
+	public Type getType() {
+		return type;
+	}
+	public void setType(Type type) {
+		this.type = type;
 	}
 	
 }
