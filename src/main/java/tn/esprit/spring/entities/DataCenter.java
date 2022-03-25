@@ -28,9 +28,18 @@ public class DataCenter implements Serializable {
 	private Date dateFabriquation;
 	private int capaciteDisque;
 	private int espaceLibreDisque;
+	
+	
 	@JsonIgnore
 	@OneToMany(mappedBy="dataCenter", fetch=FetchType.EAGER, cascade=CascadeType.REMOVE)
 	private List<VirtualMachine> vms;
+	
+	@JsonIgnore
+	@OneToMany(mappedBy="dataCenter", fetch=FetchType.EAGER, cascade=CascadeType.REMOVE)
+	private List<Disque> disques;
+	
+	
+	
 	public DataCenter() {
 		super();
 		// TODO Auto-generated constructor stub
