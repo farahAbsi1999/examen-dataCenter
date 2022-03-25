@@ -23,6 +23,7 @@ public class User implements Serializable {
 	private String prenom;
 	private String nom;
 	private Integer age;
+	private String adresse;
 	private String login;
 	private String pwd;
 	
@@ -32,7 +33,6 @@ public class User implements Serializable {
 	
 	public User() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	
@@ -90,6 +90,14 @@ public class User implements Serializable {
 
 	public void setPwd(String pwd) {
 		this.pwd = pwd;
+	}
+
+	public String getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
 	}
 
 	public Set<VirtualMachine> getVms() {
