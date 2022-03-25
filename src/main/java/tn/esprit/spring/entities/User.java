@@ -22,6 +22,7 @@ public class User implements Serializable {
 	private Integer idUser;
 	private String prenom;
 	private String nom;
+	private String adresse;
 	private String login;
 	private String pwd;
 	
@@ -72,6 +73,14 @@ public class User implements Serializable {
 
 	public void setPwd(String pwd) {
 		this.pwd = pwd;
+	}
+
+	public String getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
 	}
 
 	public Set<VirtualMachine> getVms() {
