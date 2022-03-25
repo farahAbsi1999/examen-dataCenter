@@ -21,8 +21,8 @@ public class equipements implements Serializable {
 		return id;
 	}
 	
-	public void setId(Integer id) {
-		this.id = id;
+	public void setId(Integer idEquipments) {
+		this.id = idEquipments;
 	}
 	public String getNom() {
 		return nom;
