@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -26,7 +28,51 @@ public class User implements Serializable {
 	private String adresse;
 	private String login;
 	private String pwd;
+	@Enumerated(EnumType.STRING)
+	private Genre genre;
 	
+	
+	
+	
+
+
+
+
+	public User(Integer idUser, String prenom, String nom, Integer age, String adresse, String login, String pwd,
+			Genre genre, Set<VirtualMachine> vms) {
+		super();
+		this.idUser = idUser;
+		this.prenom = prenom;
+		this.nom = nom;
+		this.age = age;
+		this.adresse = adresse;
+		this.login = login;
+		this.pwd = pwd;
+		this.genre = genre;
+		this.vms = vms;
+	}
+
+
+
+
+	public Genre getGenre() {
+		return genre;
+	}
+
+
+
+
+	public void setGenre(Genre genre) {
+		this.genre = genre;
+	}
+
+
+
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
 	@OneToMany
 	@JsonIgnore
 	private Set<VirtualMachine> vms;
