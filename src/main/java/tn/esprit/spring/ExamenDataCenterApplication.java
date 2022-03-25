@@ -6,7 +6,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-
+//this is my commit
+//author : imtinen
 @EnableSwagger2
 @SpringBootApplication
 @EnableScheduling
