@@ -22,5 +22,12 @@ public class UserServiceImpl implements IUserService {
 		userRepository.delete(userRepository.findById(id).get());
 		
 	}
+	
+	@Override
+	public User updateUser( User user) {
+		userRepository.save(user);
+		return user;
+	}
+	
 
 }
