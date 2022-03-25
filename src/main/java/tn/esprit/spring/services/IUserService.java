@@ -6,5 +6,6 @@ public interface IUserService {
 
 	void ajouterUser(User user);
 	void deleteUser(Integer id);
+	User updateUser(User user);
 
 }
