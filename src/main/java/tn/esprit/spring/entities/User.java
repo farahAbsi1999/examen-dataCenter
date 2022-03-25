@@ -22,6 +22,7 @@ public class User implements Serializable {
 	private Integer idUser;
 	private String prenom;
 	private String nom;
+	private Integer age;
 	private String login;
 	private String pwd;
 	
@@ -33,6 +34,23 @@ public class User implements Serializable {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
+	
+	
+	
+	public Integer getAge() {
+		return age;
+	}
+
+
+
+
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+
+
+
 
 	public Integer getIdUser() {
 		return idUser;
