@@ -6,4 +6,6 @@ public interface IDisqueService {
 
 	void ajouterDisque(Disque disque);
 	void deleteDisque(Integer id);
+	void affecterDisqueDatacenter(int idD, int idDc);
+
 }
