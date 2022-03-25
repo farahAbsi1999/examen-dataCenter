@@ -12,6 +12,16 @@ public class Employee {
 
 	String position;
 	
+	String supervisor;
+	
+	public String getSupervisor() {
+		return supervisor;
+	}
+
+	public void setSupervisor(String supervisor) {
+		this.supervisor = supervisor;
+	}
+
 	public String getPosition() {
 		return position;
 	}
@@ -52,12 +62,13 @@ public class Employee {
 		this.tel = tel;
 	}
 
-	public Employee(String id, String nom, String prenom, int tel, String position) {
+	public Employee(String id, String nom, String prenom, int tel, String position, String supervisor) {
 		super();
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.tel = tel;
 		this.position = position;
+		this.supervisor = supervisor;
 	}
 }
