@@ -61,7 +61,10 @@ public class DataCenterRestController {
 		disqueService.deleteDisque(Id);
 	}
 	
-	
+	@PutMapping("/affecter-Disque-Datacenter/{id-ds}/{id-dc}")
+	public void affecterDisqueDatacenter(@PathVariable("id-ds") int idds, @PathVariable("id-user") int iddc){
+		vmService.affecterVmUser(idds, iddc);
+	}
 	
 	
 	
