@@ -42,6 +42,11 @@ public class DataCenterRestController {
 		userService.ajouterUser(user);
 	}
 	
+	@PostMapping("/update-user")
+	public void updateUser(@RequestBody User user){
+		userService.updateUser(user);
+	}
+	
 	@DeleteMapping("/remove-User/{User-id}")
 	@ResponseBody
 	public void removeUser(@PathVariable("User-id") Integer UserId) {
