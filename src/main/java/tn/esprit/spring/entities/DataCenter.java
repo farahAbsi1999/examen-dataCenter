@@ -46,6 +46,15 @@ public class DataCenter implements Serializable {
 	
 	
 	
+	public List<Disque> getDisques() {
+		return disques;
+	}
+	public void setDisques(List<Disque> disques) {
+		this.disques = disques;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 	public DataCenter() {
 		super();
 		// TODO Auto-generated constructor stub

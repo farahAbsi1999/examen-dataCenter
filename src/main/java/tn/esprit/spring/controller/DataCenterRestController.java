@@ -14,9 +14,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import tn.esprit.spring.entities.DataCenter;
+import tn.esprit.spring.entities.Disque;
 import tn.esprit.spring.entities.User;
 import tn.esprit.spring.entities.VirtualMachine;
 import tn.esprit.spring.services.IDataCenterService;
+import tn.esprit.spring.services.IDisqueService;
 import tn.esprit.spring.services.IUserService;
 import tn.esprit.spring.services.IVmService;
 
@@ -33,7 +35,8 @@ public class DataCenterRestController {
 	@Autowired
 	IDataCenterService dataCenterService;
 	
-	// on envoit l'objet dans body
+	IDisqueService  disqueService ;
+	
 	@PostMapping("/ajouter-user")
 	public void ajouterUser(@RequestBody User user){
 		userService.ajouterUser(user);
@@ -44,6 +47,25 @@ public class DataCenterRestController {
 	public void removeUser(@PathVariable("User-id") Integer UserId) {
 		userService.deleteUser(UserId);
 	}
+	
+	// partie de service de disque
+	
+	@PostMapping("/ajouter-Disque")
+	public void ajouterDisque(@RequestBody Disque disque){
+		disqueService.ajouterDisque(disque);
+	}
+	
+	@DeleteMapping("/remove-Disque/{id}")
+	@ResponseBody
+	public void removeDisque(@PathVariable("id") Integer Id) {
+		disqueService.deleteDisque(Id);
+	}
+	
+	@PutMapping("/affecter-Disque-Datacenter/{id-ds}/{id-dc}")
+	public void affecterDisqueDatacenter(@PathVariable("id-ds") int idds, @PathVariable("id-user") int iddc){
+		vmService.affecterVmUser(idds, iddc);
+	}
+	
 	
 	
 	@PostMapping("/ajouter-dc")

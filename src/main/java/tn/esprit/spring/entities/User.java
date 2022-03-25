@@ -22,6 +22,8 @@ public class User implements Serializable {
 	private Integer idUser;
 	private String prenom;
 	private String nom;
+	private Integer age;
+	private String adresse;
 	private String login;
 	private String pwd;
 	
@@ -31,8 +33,24 @@ public class User implements Serializable {
 	
 	public User() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
+
+	
+	
+	
+	public Integer getAge() {
+		return age;
+	}
+
+
+
+
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+
+
+
 
 	public Integer getIdUser() {
 		return idUser;
@@ -72,6 +90,14 @@ public class User implements Serializable {
 
 	public void setPwd(String pwd) {
 		this.pwd = pwd;
+	}
+
+	public String getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
 	}
 
 	public Set<VirtualMachine> getVms() {
