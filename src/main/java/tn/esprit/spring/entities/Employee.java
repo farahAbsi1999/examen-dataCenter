@@ -9,6 +9,16 @@ public class Employee {
 	String prenom;
 	
 	int tel;
+
+	String position;
+	
+	public String getPosition() {
+		return position;
+	}
+
+	public void setPosition(String position) {
+		this.position = position;
+	}
 	
 	public String getId() {
 		return id;
@@ -42,12 +52,12 @@ public class Employee {
 		this.tel = tel;
 	}
 
-	public Employee(String id, String nom, String prenom, int tel) {
+	public Employee(String id, String nom, String prenom, int tel, String position) {
 		super();
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.tel = tel;
+		this.position = position;
 	}
-
 }
