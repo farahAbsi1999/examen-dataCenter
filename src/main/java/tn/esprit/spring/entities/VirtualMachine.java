@@ -23,6 +23,11 @@ public class VirtualMachine implements Serializable {
 	private int tailleDisque;
 	@Enumerated(EnumType.STRING)
 	private Etat etat;
+	//imtinen
+	
+	private String test;
+	
+	
 	@ManyToOne
 	private DataCenter dataCenter;
 	
