@@ -8,12 +8,25 @@ public class Employee {
 	
 	String prenom;
 	
+	String adresse ; 
+	
 	int tel;
 
 	String position;
 	
 	String supervisor;
 	
+	
+	
+	
+	public String getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
+	}
+
 	public String getSupervisor() {
 		return supervisor;
 	}
@@ -62,13 +75,16 @@ public class Employee {
 		this.tel = tel;
 	}
 
-	public Employee(String id, String nom, String prenom, int tel, String position, String supervisor) {
+	public Employee(String id, String nom, String prenom, String adresse, int tel, String position, String supervisor) {
 		super();
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
+		this.adresse = adresse;
 		this.tel = tel;
 		this.position = position;
 		this.supervisor = supervisor;
 	}
+
+
 }
