@@ -13,6 +13,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
+import tn.esprit.spring.entities.Disque;
 import tn.esprit.spring.entities.User;
 
 
@@ -46,7 +47,7 @@ public class ExamenDataCenterApplication implements CommandLineRunner  {
 	@Override
 	public void run(String... args) throws Exception {
 		restConfiguration.exposeIdsFor(User.class);
-		
+		restConfiguration.exposeIdsFor(Disque.class);
 	}
 
 }
